@@ -22,7 +22,7 @@ def scrape_linkedin_profile(linkedin_profile_url: str, mock: bool=False):
         )
     else:
         api_endpoint = "https://nubela.co/proxycurl/api/v2/linkedin"
-        header_dic = {'Authorization': f'Bearer {os.environ.get("FiBCK2tUDs-kj_h-XBai0g")}'}
+        header_dic = {'Authorization': f'Bearer {os.environ.get("PROXYCURL_API_KEY")}'}
         response = requests.get(
             api_endpoint,
             params={"url": linkedin_profile_url},
