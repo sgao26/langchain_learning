@@ -8,3 +8,6 @@ class Summary(BaseModel):
 
     def to_dict(self) -> Dict[str, Any]:
         return {"summary": self.summary, "facts": self.facts}
+
+
+summary_parser = PydanticOutputParser(pydantic_object=Summary)
